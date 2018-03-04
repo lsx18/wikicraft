@@ -38,9 +38,11 @@ define([
             this.componentMode     = "section";
             this.generateClassName = app.generateSectionClassName.bind(this);
             
-            let designId = this.params.design.id;
-
-            this.css = app.generateClassStyle(designId, styles[designId]);
+            $scope.$watch('$ctrl.params', function(newParams, oldParams){
+                let designId = this.params.design.id;
+                
+                this.css = app.generateClassStyle(designId, styles[designId]);
+            }.bind(this));
         }
     });
 

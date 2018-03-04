@@ -16,13 +16,17 @@ define([
 		if (!md) {
 			return;
 		}
+		
+		if (md.mode == 'preview') {
+			index = 0;
+		}
 
 		if (index == undefined) {
 			block = md.template;
 		} else {
 			block = md.template.blockList[index];
 		}
-
+		
 		if(!block) {
             return;
 		}
@@ -40,6 +44,7 @@ define([
 			//template: '<div><wiki-block data-params="$kp_block"></wiki-block></div>',
 			template: wikiBlockContainerHtml,
 			controller:['$scope', '$attrs', '$element', function($scope, $attrs, $element) {
+
 				var index      = $scope.$eval("$index");
 				var mdName     = decodeURI($attrs.params);
 				var isTemplate = $attrs.template;
@@ -47,8 +52,15 @@ define([
 				var block      = extendBlock($scope, mdName, index);
 				var md         = getMd(mdName);
 
+
 				if (block) {
 					block.$element = $element; // 双向滚动时会用到
+				}
+
+				if (md.mode == "preview") {
+					$scope.isShowAddIcon = false;
+				} else {
+					$scope.isShowAddIcon = true;
 				}
 
 				if (!block || !md || md.mode != "editor") {
@@ -58,7 +70,6 @@ define([
 				$element.addClass("mod-container");
 				
 				$scope.insertMod     = $rootScope.insertMod;
-				$scope.isShowAddIcon = true;
 
 				$scope.clickContainer = function($event) {
 					if ($event) {
