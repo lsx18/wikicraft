@@ -30,6 +30,38 @@ define([
 					]
 				}
 			]
+        },
+        media_img : {
+			is_leaf      : true, 
+			type         : "media",   
+			mediaType    : "image",
+			editable     : true, 
+			is_mod_hide  : false,  
+			is_card_show : true,
+			name         : "logo",   
+			require      : true, 
+		},
+		link_title : {
+			is_leaf      : true, 
+			type         : "link",   
+			editable     : true, 
+			is_mod_hide  : false,  
+			is_card_show : true,
+			name         : "标题",   
+			text         : "YOUR HEAD LINE", 
+			href         : "",
+			require      : true, 
+		},
+		link_subtitle : {
+			is_leaf      : true, 
+			type         : "link",   
+			editable     : true, 
+			is_mod_hide  : false,  
+			is_card_show : true,
+			name         : "子标题",   
+			text         : "YOUR SUB LINE", 
+			href         : "",
+			require      : true, 
 		},
 		text : {
 			type        : "text",

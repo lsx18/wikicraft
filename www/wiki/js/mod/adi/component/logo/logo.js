@@ -16,8 +16,19 @@ define([
         bindings : {
 
         },
-        controller : function(){
-            console.log(this);
+        controller: function(){
+            this.componentMode              = 'component';
+            this.generateComponentClassName = app.generateComponentClassName.bind(this);
+            this.componentStyleName         = "component-logo-style";
+            this.logoStyle                  = {
+                "logoComponent" : {
+                    "width"            : "50%",
+                    "height"           : "50px",
+                    // "float"            : "left",
+                },
+            };
+
+            this.css = app.generateClassStyle(this.componentStyleName, this.logoStyle);
         }
     });
 });

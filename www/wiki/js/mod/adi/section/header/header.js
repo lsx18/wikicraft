@@ -8,7 +8,9 @@ define([
     'app', 
     'text!wikimod/adi/section/header/header.template.html',
     'wikimod/adi/component/menu/menu',
-    'wikimod/adi/component/logo/logo'
+    'wikimod/adi/component/logo/logo',
+    'wikimod/adi/component/business_name/business_name',
+    'wikimod/adi/component/tagline/tagline',
 ], function (app, template) {
   
     let styles = {
