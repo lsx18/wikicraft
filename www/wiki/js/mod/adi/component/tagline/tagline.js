@@ -19,15 +19,25 @@ define([
             this.componentStyleName         = "component-tagline-style";
             this.taglineStyle                  = {
                 "taglineComponent" : {
-                    "width"            : "50%",
-                    "height"           : "50px",
-                    // "float"            : "left",
+                    "float" : "left",
+                    "width" : "80%",
+                    "height": "35px",
+                    // "clear" : "both",
+                    // "display": "flex",
+                    // "justify-content": "flex-end",
                 },
-                "taglineComponent  h2" : {
-                    "height"                : "50px",
-                    "text-align"            : "center",
-                    "line-height"           : "50px",
-                    // "clear"                 : "both",
+                "taglineComponent > h2" : {
+                    "width"             : "100%",
+                    "height"            : "35px",
+                    "margin"            : "0",
+                    "font-size"         : "24px",
+                    "font-family"       : "Microsoft YaHei",
+                    "font-weight"       : "normal",
+                    "color"             : "#0f2639",
+                    "-webkit-line-clamp": "1", 
+                    "display"           : "-webkit-box",  
+                    "-webkit-box-orient": "vertical", 
+                    "overflow"          : "hidden",  
                 }
             };
 

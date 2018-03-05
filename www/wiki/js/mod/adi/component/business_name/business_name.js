@@ -19,14 +19,23 @@ define([
             this.componentStyleName         = "component-business_name-style";
             this.business_nameStyle                  = {
                 "business_nameComponent" : {
-                    "width"            : "50%",
-                    "height"           : "50px",
-                    // "float"            : "right",
+                    "float" : "left",
+                    "width" : "80%",
+                    "height": "35px",
+                    // "clear" : "both",
                 },
                 "business_nameComponent > h1" : {
-                    "height"                : "50px",
-                    "text-align"            : "center",
-                    "line-height"           : "50px",
+                    "width"             : "100%",
+                    "height"            : "35px",
+                    "margin"            : "0",
+                    "font-size"         : "32px",
+                    "font-family"       : "Microsoft YaHei",
+                    "font-weight"       : "bold",
+                    "color"             : "#0f2639",
+                    "-webkit-line-clamp": "1", 
+                    "display"           : "-webkit-box",  
+                    "-webkit-box-orient": "vertical", 
+                    "overflow"          : "hidden",  
                 }
             };
 

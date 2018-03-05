@@ -491,7 +491,7 @@ select.resize-view {
 }
 .wikiEditor .mod-container.active{
     position: relative;
-    border: 2px dashed #69B9FF;
+    /* border: 2px dashed #69B9FF; */
 }
 .wikiEditor .mod-container.active .fake-icon{
     display: inline-block;
@@ -831,4 +831,21 @@ p.file-large-info > .filename{
 }
 
 .kp_wiki_block_container:hover {
+}
+
+.edit-btn {
+    display: block;
+    float:left;
+    z-index: 99;
+    margin: 3px 12px 3px 0;
+    padding:0 12px;
+    min-width: 74px;
+    height: 30px;
+    border: none;
+    border-radius: 37px;
+    box-shadow: 0 0 14px 0 rgba(32,48,60,.1);
+    background:white;
+}
+.edit-btn:hover {
+    color: #459fed;
 }

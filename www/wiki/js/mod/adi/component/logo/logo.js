@@ -22,9 +22,13 @@ define([
             this.componentStyleName         = "component-logo-style";
             this.logoStyle                  = {
                 "logoComponent" : {
-                    "width"            : "50%",
-                    "height"           : "50px",
-                    // "float"            : "left",
+                    "float" : "left",
+                    "width" : "70px",
+                    "height": "70px",
+                },
+                "logoComponent>a>img" : {
+                    "width" : "60px",
+                    "height": "60px",
                 },
             };
 

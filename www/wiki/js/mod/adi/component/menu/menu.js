@@ -22,6 +22,7 @@ define([
             this.componentStyleName         = "component-menu-style";
             this.menuStyle                  = {
                 "list" : {
+                    "clear"            : "both",
                     "list-style-type"  : "none",
                     "width"            : "100%",
                     "height"           : "50px",
